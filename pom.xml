@@ -5,18 +5,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.3.0.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.2.1.RELEASE</version>
 	</parent>
 
 	<groupId>com.lcy.store</groupId>
 	<artifactId>store</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pom</name>
+	<packaging>pom</packaging>
 	<description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>store-api</module>
+        <!--<module>store-api</module>-->
         <module>store-support</module>
     </modules>
 

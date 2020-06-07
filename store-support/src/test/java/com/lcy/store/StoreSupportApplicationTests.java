@@ -1,13 +1,40 @@
 package com.lcy.store;
 
-import org.junit.jupiter.api.Test;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.lcy.store.entity.Waybill;
+import com.lcy.store.service.WaybillService;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
-class StoreSupportApplicationTests {
+@RunWith(SpringRunner.class)
+public class StoreSupportApplicationTests {
+
+	@Autowired
+	private WaybillService waybillService;
 
 	@Test
-	void contextLoads() {
+	public void addWaybill() {
+		for (int i = 0; i < 100; i++) {
+			Waybill waybill = new Waybill();
+			waybill.setWaybillNo("LD00002346"+i);
+			waybill.setOrderNo("00002346"+i);
+			waybillService.save(waybill);
+		}
+
 	}
+
+	@Test
+	public void getWaybill(){
+		QueryWrapper<Waybill> wrapper = new QueryWrapper<>();
+		wrapper.eq("waybill_no","LD0000234644");
+		Waybill waybill = waybillService.getOne(wrapper);
+		System.out.println(waybill);
+		System.out.println(waybill.getId());
+	}
+
 
 }
