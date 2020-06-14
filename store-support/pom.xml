@@ -5,25 +5,18 @@
 	<parent>
 		<groupId>com.lcy.store</groupId>
 		<artifactId>store</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.lcy.store</groupId>
 	<artifactId>store-support</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>store-support</name>
-	<description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<dependencies>
-		<!--<dependency>
+		<dependency>
 			<groupId>com.lcy.store</groupId>
 			<artifactId>store-api</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>-->
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -76,12 +69,12 @@
 			<version>3.0.5</version>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.0</version>
 			<scope>provided</scope>
-		</dependency>
+		</dependency>-->
 
 	</dependencies>
 
@@ -90,6 +83,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- 不指定单元测试 -->
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
