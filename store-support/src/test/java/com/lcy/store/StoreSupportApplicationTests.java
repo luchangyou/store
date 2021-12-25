@@ -72,8 +72,8 @@ public class StoreSupportApplicationTests {
 		Page page = new Page(1,10);
 		IPage waybillPage = waybillService.page(page, wrapper);
 		List records = waybillPage.getRecords();
-		System.out.println(records.size());
-		System.out.println(waybillPage.getTotal());
+		System.out.println("records.sizze"+records.size());
+		System.out.println("waybillPage.total"+waybillPage.getTotal());
 	}
 
 }
