@@ -32,8 +32,12 @@ public class StoreSupportApplicationTests {
 			order.setWaybillNo("LD111123461"+i);
 			orderService.save(order);
 		}
+	}
 
-
+	@Test
+	public void getOrder(){
+		OrderInfo orderInfo = orderService.getByOrderNo("000023460");
+		System.out.println(orderInfo);
 	}
 
 	@Test
