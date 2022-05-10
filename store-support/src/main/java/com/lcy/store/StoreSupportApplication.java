@@ -11,7 +11,6 @@ public class StoreSupportApplication {
 
 	public static void main(String[] args) {
 
-		//测试git
 		SpringApplication.run(StoreSupportApplication.class, args);
 
 	}
